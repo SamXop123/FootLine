@@ -36,7 +36,6 @@ pnpm install
 pnpm dev
 ```
 
-App runs at: http://localhost:5173/
 
 ## Scripts
 
@@ -95,6 +94,6 @@ The demo uses a static `player-database.js` with goalkeepers, defenders, midfiel
 
 PRs and suggestions are welcome. Please open an issue to discuss significant changes.
 
-## License
+### License
 
-MIT
+MIT (Modified)
