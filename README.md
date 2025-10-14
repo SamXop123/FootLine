@@ -1,10 +1,8 @@
-<div align="center">
 
-# FootLine (React)
 
-Build your dream football lineup. Pick formations, search players, and save/share lineups — fast.
+# [![Typing SVG](https://readme-typing-svg.demolab.com?font=Arial&size=40&letterSpacing=0.2rem&duration=2000&pause=1000&color=10FF0B&repeat=false&width=435&height=60&lines=FootLine)](https://git.io/typing-svg)
 
-</div>
+## [![Typing SVG](https://readme-typing-svg.demolab.com?font=Arial&size=15&letterSpacing=0.2rem&duration=1000&color=10FF0B&multiline=true&repeat=false&width=505&height=80&lines=Build+your+dream+football+lineup.+;Pick+formations%2C+search+players%2C+and;+save%2Fshare+lineups+%E2%80%94+fast.)](https://git.io/typing-svg)
 
 
 ## Features
@@ -38,7 +36,6 @@ pnpm install
 pnpm dev
 ```
 
-App runs at: http://localhost:5173/
 
 ## Scripts
 
@@ -97,6 +94,6 @@ The demo uses a static `player-database.js` with goalkeepers, defenders, midfiel
 
 PRs and suggestions are welcome. Please open an issue to discuss significant changes.
 
-## License
+### License
 
-MIT
+MIT (Modified)
