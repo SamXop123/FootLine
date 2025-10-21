@@ -4,6 +4,14 @@ import { Trash2, Download, Calendar } from 'lucide-react'
 import { formatDate } from '@/lib/utils'
 
 export default function SavedLineups({ lineups, onLoad, onDelete }) {
+  if (lineups.length === 0) {
+    return (
+      <div className="text-center py-16">
+        <h2 className="text-2xl font-bold text-gray-400 mb-2">No Saved Lineups</h2>
+        <p className="text-gray-500">Create and save your first lineup to see it here.</p>
+      </div>
+    )
+  }
 
   return (
     <div>
