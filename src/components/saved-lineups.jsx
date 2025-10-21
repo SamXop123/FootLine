@@ -18,7 +18,26 @@ export default function SavedLineups({ lineups, onLoad, onDelete }) {
                 {lineup.date ? formatDate(lineup.date) : 'No date'}
               </div>
             </CardHeader>
-
+            <CardContent>
+              <div className="text-sm">
+                <p>
+                  <strong>Formation:</strong> {lineup.formation.name}
+                </p>
+                <p>
+                  <strong>Players:</strong> {lineup.players.filter(Boolean).length}/11
+                </p>
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-between">
+              <Button variant="default" onClick={() => onLoad(lineup)}>
+                <Download className="h-4 w-4 mr-2" />
+                Load
+              </Button>
+              <Button variant="destructive" onClick={() => onDelete(lineup.id || '')}>
+                <Trash2 className="h-4 w-4 mr-2" />
+                Delete
+              </Button>
+            </CardFooter>
           </Card>
         ))}
       </div>
