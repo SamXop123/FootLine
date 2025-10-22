@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from '@/pages/Home'
-import { Toaster } from '@/components/ui/toaster'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import './App.css'
 
 export default function App() {
@@ -9,7 +10,18 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-      <Toaster />
+      <ToastContainer 
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   )
 }
