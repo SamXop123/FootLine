@@ -1,4 +1,6 @@
+// Mock player database with realistic data
 export const playerDatabase = [
+  // Goalkeepers
   {
     id: "p1",
     name: "David De Gea",
@@ -43,5 +45,51 @@ export const playerDatabase = [
     team: "Bayern Munich",
     nationality: "Germany",
     stats: { diving: 89, handling: 91, kicking: 95, reflexes: 89, speed: 67, positioning: 91 },
+  },
+  {
+    id: "p7",
+    name: "Gianluigi Donnarumma",
+    number: 99,
+    position: "GK",
+    team: "Paris Saint-Germain",
+    nationality: "Italy",
+    stats: { diving: 85, handling: 88, kicking: 75, reflexes: 90, speed: 54, positioning: 85 },
+  },
+  {
+    id: "p8",
+    name: "Marc-André ter Stegen",
+    number: 1,
+    position: "GK",
+    team: "Barcelona",
+    nationality: "Germany",
+    stats: { diving: 85, handling: 87, kicking: 88, reflexes: 89, speed: 58, positioning: 84 },
+  },
+  // Defenders
+  {
+    id: "p11",
+    name: "Virgil van Dijk",
+    number: 4,
+    position: "DEF",
+    team: "Liverpool",
+    nationality: "Netherlands",
+    stats: { pace: 78, shooting: 60, passing: 70, dribbling: 72, defending: 90, physical: 86 },
+  },
+  {
+    id: "p13",
+    name: "Sergio Ramos",
+    number: 4,
+    position: "DEF",
+    team: "Paris Saint-Germain",
+    nationality: "Spain",
+    stats: { pace: 77, shooting: 64, passing: 68, dribbling: 70, defending: 88, physical: 84 },
+  },
+  {
+    id: "p15",
+    name: "Marquinhos",
+    number: 5,
+    position: "DEF",
+    team: "Paris Saint-Germain",
+    nationality: "Brazil",
+    stats: { pace: 78, shooting: 62, passing: 75, dribbling: 74, defending: 86, physical: 82 },
   },
 ]
