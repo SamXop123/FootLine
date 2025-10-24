@@ -92,4 +92,32 @@ export const playerDatabase = [
     nationality: "Brazil",
     stats: { pace: 78, shooting: 62, passing: 75, dribbling: 74, defending: 86, physical: 82 },
   },
+  {
+    id: "p19",
+    name: "Achraf Hakimi",
+    number: 2,
+    position: "DEF",
+    team: "Paris Saint-Germain",
+    nationality: "Morocco",
+    stats: { pace: 91, shooting: 76, passing: 78, dribbling: 80, defending: 75, physical: 78 },
+  },
+  // Midfielders
+  {
+    id: "p29",
+    name: "Kevin De Bruyne",
+    number: 17,
+    position: "MID",
+    team: "Manchester City",
+    nationality: "Belgium",
+    stats: { pace: 76, shooting: 86, passing: 93, dribbling: 88, defending: 64, physical: 78 },
+  },
+  {
+    id: "p30",
+    name: "Luka Modric",
+    number: 10,
+    position: "MID",
+    team: "Real Madrid",
+    nationality: "Croatia",
+    stats: { pace: 73, shooting: 76, passing: 89, dribbling: 88, defending: 72, physical: 68 },
+  },
 ]
