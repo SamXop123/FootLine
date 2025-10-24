@@ -3,6 +3,13 @@ import { UserPlus, Check } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export default function PlayerCard({ player, onSelect, isInLineup }) {
+  const positionColors = {
+    GK: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
+    DEF: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
+    MID: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+    FWD: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
+  }
+
   return (
     <div className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
       <div className="flex items-center">
