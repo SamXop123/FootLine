@@ -24,6 +24,20 @@ export default function PlayerCard({ player, onSelect, isInLineup }) {
           </div>
         </div>
       </div>
+
+      <Button variant={isInLineup ? 'secondary' : 'default'} size="sm" onClick={() => onSelect(player)}>
+        {isInLineup ? (
+          <>
+            <Check className="h-4 w-4 mr-1" />
+            Selected
+          </>
+        ) : (
+          <>
+            <UserPlus className="h-4 w-4 mr-1" />
+            Select
+          </>
+        )}
+      </Button>
     </div>
   )
 }
