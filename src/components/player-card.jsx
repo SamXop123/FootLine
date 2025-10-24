@@ -1,0 +1,22 @@
+import { Button } from '@/components/ui/button'
+import { UserPlus, Check } from 'lucide-react'
+import { cn } from '@/lib/utils'
+
+export default function PlayerCard({ player, onSelect, isInLineup }) {
+  return (
+    <div className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+      <div className="flex items-center">
+        <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center font-bold text-lg mr-3">
+          {player.number}
+        </div>
+        <div>
+          <h3 className="font-medium">{player.name}</h3>
+          <div className="flex items-center text-xs text-gray-500 dark:text-gray-400">
+            <span className={cn('px-1.5 py-0.5 rounded-full mr-2', positionColors[player.position])}>{player.position}</span>
+            <span>{player.team}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
