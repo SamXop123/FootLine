@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import FootballPitch from '@/components/football-pitch'
 import PlayerSearch from '@/components/player-search'
 import SavedLineups from '@/components/saved-lineups'
+import { formations } from '@/lib/formations'
 import { toast } from 'react-toastify'
 import { playerDatabase } from '@/lib/player-database'
 
@@ -22,4 +23,8 @@ export default function LineupBuilder() {
       setSavedLineups(JSON.parse(saved))
     }
   }, [])
+  return (
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+    </div>
+  )
 }
