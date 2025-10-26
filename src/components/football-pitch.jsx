@@ -10,6 +10,14 @@ export default function FootballPitch({
   onPositionClick,
   onRemovePlayer,
 }) {
+  const isNonStandardPosition = (positionId) => {
+    const player = lineup.players[positionId - 1]
+    if (!player) return false
+    const position = formation.positions.find((pos) => pos.id === positionId)
+    if (!position) return false
+    return player.position !== position.type
+  }
+
   return (
     <div className="relative w-full h-[500px] bg-green-600 rounded-lg overflow-hidden">
       <div className="absolute inset-0 flex flex-col">
