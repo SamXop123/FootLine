@@ -17,8 +17,20 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
 
   const teams = Array.from(new Set(playerDatabase.map((player) => player.team)))
   const nationalities = Array.from(new Set(playerDatabase.map((player) => player.nationality)))
+
   useEffect(() => {
     let results = playerDatabase
+
+    if (searchTerm) {
+      results = results.filter((player) => player.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    }
+
+
+  const handleResetFilters = () => {
+    setSearchTerm('')
+    setPositionFilter('all')
+    setTeamFilter('all')
+    setNationalityFilter('all')
   }
 
   return (
@@ -35,8 +47,11 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
 
       <div className="space-y-4">
         <Input placeholder="Search players..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="mb-2" />
+
+        <div className="flex items-center gap-2 mb-2">
         </div>
 
+      </div>
     </div>
   )
 }
