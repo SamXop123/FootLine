@@ -11,8 +11,16 @@ import { Badge } from '@/components/ui/badge'
 export default function PlayerSearch({ onPlayerSelect, selectedPosition, currentLineup, showAllPositions = true }) {
   const [searchTerm, setSearchTerm] = useState('')
   const [filteredPlayers, setFilteredPlayers] = useState(playerDatabase)
+  const [positionFilter, setPositionFilter] = useState('all')
+  const [teamFilter, setTeamFilter] = useState('all')
+  const [nationalityFilter, setNationalityFilter] = useState('all')
+
   const teams = Array.from(new Set(playerDatabase.map((player) => player.team)))
   const nationalities = Array.from(new Set(playerDatabase.map((player) => player.nationality)))
+  useEffect(() => {
+    let results = playerDatabase
+  }
+
   return (
     <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 h-full">
       <h2 className="text-xl font-bold mb-4 flex items-center">
@@ -24,6 +32,11 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
           </Badge>
         )}
       </h2>
+
+      <div className="space-y-4">
+        <Input placeholder="Search players..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="mb-2" />
+        </div>
+
     </div>
   )
 }
