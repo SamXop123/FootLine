@@ -47,6 +47,15 @@ export const playerDatabase = [
     stats: { diving: 89, handling: 91, kicking: 95, reflexes: 89, speed: 67, positioning: 91 },
   },
   {
+    id: "p6",
+    name: "Jan Oblak",
+    number: 13,
+    position: "GK",
+    team: "Atletico Madrid",
+    nationality: "Slovenia",
+    stats: { diving: 89, handling: 92, kicking: 78, reflexes: 92, speed: 50, positioning: 90 },
+  },
+  {
     id: "p7",
     name: "Gianluigi Donnarumma",
     number: 99,
@@ -64,6 +73,25 @@ export const playerDatabase = [
     nationality: "Germany",
     stats: { diving: 85, handling: 87, kicking: 88, reflexes: 89, speed: 58, positioning: 84 },
   },
+  {
+    id: "p9",
+    name: "Hugo Lloris",
+    number: 1,
+    position: "GK",
+    team: "Tottenham Hotspur",
+    nationality: "France",
+    stats: { diving: 84, handling: 82, kicking: 76, reflexes: 90, speed: 59, positioning: 85 },
+  },
+  {
+    id: "p10",
+    name: "Keylor Navas",
+    number: 1,
+    position: "GK",
+    team: "Paris Saint-Germain",
+    nationality: "Costa Rica",
+    stats: { diving: 88, handling: 84, kicking: 75, reflexes: 91, speed: 63, positioning: 87 },
+  },
+
   // Defenders
   {
     id: "p11",
