@@ -103,6 +103,15 @@ export const playerDatabase = [
     stats: { pace: 78, shooting: 60, passing: 70, dribbling: 72, defending: 90, physical: 86 },
   },
   {
+    id: "p12",
+    name: "Ruben Dias",
+    number: 3,
+    position: "DEF",
+    team: "Manchester City",
+    nationality: "Portugal",
+    stats: { pace: 75, shooting: 55, passing: 72, dribbling: 71, defending: 88, physical: 85 },
+  },
+  {
     id: "p13",
     name: "Sergio Ramos",
     number: 4,
