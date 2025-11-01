@@ -121,6 +121,15 @@ export const playerDatabase = [
     stats: { pace: 77, shooting: 64, passing: 68, dribbling: 70, defending: 88, physical: 84 },
   },
   {
+    id: "p14",
+    name: "Kalidou Koulibaly",
+    number: 26,
+    position: "DEF",
+    team: "Chelsea",
+    nationality: "Senegal",
+    stats: { pace: 81, shooting: 58, passing: 68, dribbling: 72, defending: 87, physical: 86 },
+  },
+  {
     id: "p15",
     name: "Marquinhos",
     number: 5,
