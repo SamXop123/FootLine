@@ -25,6 +25,13 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
       results = results.filter((player) => player.name.toLowerCase().includes(searchTerm.toLowerCase()))
     }
 
+    if (positionFilter !== 'all') {
+      results = results.filter((player) => player.position === positionFilter)
+    } else if (selectedPosition && !showAllPositions) {
+      results = results.filter((player) => player.position === selectedPosition.type)
+    }
+
+  }, [searchTerm, positionFilter, teamFilter, nationalityFilter, selectedPosition, showAllPositions])
 
   const handleResetFilters = () => {
     setSearchTerm('')
