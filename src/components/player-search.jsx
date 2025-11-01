@@ -31,6 +31,15 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
       results = results.filter((player) => player.position === selectedPosition.type)
     }
 
+    if (teamFilter !== 'all') {
+      results = results.filter((player) => player.team === teamFilter)
+    }
+
+    if (nationalityFilter !== 'all') {
+      results = results.filter((player) => player.nationality === nationalityFilter)
+    }
+
+    setFilteredPlayers(results)
   }, [searchTerm, positionFilter, teamFilter, nationalityFilter, selectedPosition, showAllPositions])
 
   const handleResetFilters = () => {
