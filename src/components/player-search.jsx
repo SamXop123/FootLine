@@ -65,6 +65,11 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
         <Input placeholder="Search players..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="mb-2" />
 
         <div className="flex items-center gap-2 mb-2">
+          <Filter className="h-4 w-4" />
+          <span className="text-sm font-medium">Filters</span>
+          <Button variant="ghost" size="sm" onClick={handleResetFilters} className="ml-auto text-xs">
+            Reset
+          </Button>
         </div>
 
       </div>
