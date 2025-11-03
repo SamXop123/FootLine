@@ -26,6 +26,13 @@ export default function FootballPitch({
         <div className="absolute top-0 left-1/2 w-36 h-16 border-b-2 border-l-2 border-r-2 border-white/70 -translate-x-1/2"></div>
         <div className="absolute bottom-0 left-1/2 w-36 h-16 border-t-2 border-l-2 border-r-2 border-white/70 -translate-x-1/2"></div>
       </div>
+
+      {formation.positions.map((position) => {
+        const player = lineup.players[position.id - 1]
+        const nonStandardPos = player && isNonStandardPosition(position.id)
+        return (
+        )
+      })}
     </div>
   )
 }
