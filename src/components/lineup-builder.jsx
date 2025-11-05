@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Button } from '@/components/ui/button'
+import { Share2, Save, RefreshCw } from 'lucide-react'
 import FootballPitch from '@/components/football-pitch'
 import PlayerSearch from '@/components/player-search'
 import SavedLineups from '@/components/saved-lineups'
+import PositionWarningDialog from '@/components/position-warning-dialog'
 import { formations } from '@/lib/formations'
+import { generateRandomLineup } from '@/lib/utils'
 import { toast } from 'react-toastify'
 import { playerDatabase } from '@/lib/player-database'
 
@@ -17,6 +21,9 @@ export default function LineupBuilder() {
   })
   const [savedLineups, setSavedLineups] = useState([])
   const [selectedPosition, setSelectedPosition] = useState(null)
+
+  const [showPositionWarning, setShowPositionWarning] = useState(false)
+
   useEffect(() => {
     const saved = localStorage.getItem('savedLineups')
     if (saved) {
