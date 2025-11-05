@@ -23,6 +23,8 @@ export default function LineupBuilder() {
   const [selectedPosition, setSelectedPosition] = useState(null)
 
   const [showPositionWarning, setShowPositionWarning] = useState(false)
+  const [pendingPlayer, setPendingPlayer] = useState(null)
+  const [pendingPosition, setPendingPosition] = useState(null)
 
   useEffect(() => {
     const saved = localStorage.getItem('savedLineups')
@@ -74,6 +76,20 @@ export default function LineupBuilder() {
     setSavedLineups(updatedLineups)
     localStorage.setItem('savedLineups', JSON.stringify(updatedLineups))
     toast.success('Your lineup has been saved successfully.')
+  }
+
+
+  const handleLoadLineup = (savedLineup) => {
+    setLineup(savedLineup)
+    setSelectedFormation(savedLineup.formation)
+    setActiveTab('build')
+  }
+
+  const handleDeleteLineup = (id) => {
+    const updatedLineups = savedLineups.filter((l) => l.id !== id)
+    setSavedLineups(updatedLineups)
+    localStorage.setItem('savedLineups', JSON.stringify(updatedLineups))
+    toast.success('Your lineup has been deleted.')
   }
 
   return (
