@@ -30,7 +30,18 @@ export default function FootballPitch({
       {formation.positions.map((position) => {
         const player = lineup.players[position.id - 1]
         const nonStandardPos = player && isNonStandardPosition(position.id)
+
         return (
+          <div
+            key={position.id}
+            className={cn(
+              'absolute flex flex-col items-center cursor-pointer transition-all',
+              selectedPosition?.id === position.id ? 'scale-110' : '',
+            )}
+            style={{ left: `${position.x}%`, top: `${position.y}%`, transform: 'translate(-50%, -50%)' }}
+            onClick={() => onPositionClick(position)}
+          >
+          </div>
         )
       })}
     </div>
