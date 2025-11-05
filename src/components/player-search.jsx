@@ -87,6 +87,9 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
           </Select>
 
         </div>
+
+        <div className="mt-4">
+        </div>
       </div>
     </div>
   )
