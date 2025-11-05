@@ -72,6 +72,21 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
           </Button>
         </div>
 
+        <div className="grid grid-cols-1 gap-2">
+          <Select value={positionFilter} onValueChange={setPositionFilter}>
+            <SelectTrigger>
+              <SelectValue placeholder="Position" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Positions</SelectItem>
+              <SelectItem value="GK">Goalkeeper</SelectItem>
+              <SelectItem value="DEF">Defender</SelectItem>
+              <SelectItem value="MID">Midfielder</SelectItem>
+              <SelectItem value="FWD">Forward</SelectItem>
+            </SelectContent>
+          </Select>
+
+        </div>
       </div>
     </div>
   )
