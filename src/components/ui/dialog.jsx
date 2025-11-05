@@ -42,6 +42,8 @@ const DialogDescription = React.forwardRef(function DialogDescription({ classNam
 
 export {
   Dialog,
+  DialogPortal,
+  DialogOverlay,
   DialogHeader,
   DialogFooter,
   DialogTitle,
