@@ -41,6 +41,18 @@ export default function FootballPitch({
             style={{ left: `${position.x}%`, top: `${position.y}%`, transform: 'translate(-50%, -50%)' }}
             onClick={() => onPositionClick(position)}
           >
+            <div
+              className={cn(
+                'w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mb-1',
+                player ? 'bg-blue-500 text-white' : 'bg-gray-300 dark:bg-gray-600 text-gray-700 dark:text-gray-300',
+                selectedPosition?.id === position.id ? 'ring-2 ring-yellow-400' : '',
+                nonStandardPos ? 'ring-2 ring-yellow-500' : '',
+              )}
+            >
+            </div>
+            <div className="text-xs font-medium text-white bg-black/50 px-2 py-0.5 rounded-full whitespace-nowrap">
+              {player ? player.name : position.name}
+            </div>
           </div>
         )
       })}
