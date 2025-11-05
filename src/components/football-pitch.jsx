@@ -49,6 +49,13 @@ export default function FootballPitch({
                 nonStandardPos ? 'ring-2 ring-yellow-500' : '',
               )}
             >
+              {player ? (
+                <div className="relative w-full h-full">
+                  <div className="absolute inset-0 flex items-center justify-center">{player.number}</div>
+                </div>
+              ) : (
+                position.shortName
+              )}
             </div>
             <div className="text-xs font-medium text-white bg-black/50 px-2 py-0.5 rounded-full whitespace-nowrap">
               {player ? player.name : position.name}
