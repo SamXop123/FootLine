@@ -47,6 +47,18 @@ export default function LineupBuilder() {
     setSelectedPosition(position)
   }
 
+  const assignPlayerToPosition = (player, position) => {
+    const newLineup = { ...lineup }
+    const positionIndex = position.id - 1
+
+    const existingIndex = newLineup.players.findIndex((p) => p && p.id === player.id)
+    if (existingIndex !== -1) {
+      newLineup.players[existingIndex] = null
+    }
+
+    newLineup.players[positionIndex] = player
+    setLineup(newLineup)
+  }
 
   const handlePlayerSelect = (player) => {
     if (!selectedPosition) return
