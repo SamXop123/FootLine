@@ -78,6 +78,12 @@ export default function LineupBuilder() {
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <TabsContent value="saved">
+          <SavedLineups lineups={savedLineups} onLoad={handleLoadLineup} onDelete={handleDeleteLineup} />
+        </TabsContent>
+      </Tabs>
+
     </div>
   )
 }
