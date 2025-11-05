@@ -38,6 +38,25 @@ export default function LineupBuilder() {
     setSelectedPosition(position)
   }
 
+
+  const handlePlayerSelect = (player) => {
+    if (!selectedPosition) return
+    if (player.position !== selectedPosition.type) {
+      setPendingPlayer(player)
+      setPendingPosition(selectedPosition)
+      setShowPositionWarning(true)
+    } else {
+      assignPlayerToPosition(player, selectedPosition)
+    }
+  }
+
+
+  const handleRemovePlayer = (positionId) => {
+    const newLineup = { ...lineup }
+    newLineup.players[positionId - 1] = null
+    setLineup(newLineup)
+  }
+
   const handleSaveLineup = () => {
     const newLineup = {
       ...lineup,
