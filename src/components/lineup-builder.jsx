@@ -23,6 +23,33 @@ export default function LineupBuilder() {
       setSavedLineups(JSON.parse(saved))
     }
   }, [])
+
+  const handleFormationChange = (formation) => {
+    setSelectedFormation(formation)
+    setLineup((prev) => ({
+      ...prev,
+      formation,
+      players: Array(11).fill(null),
+    }))
+    setSelectedPosition(null)
+  }
+
+  const handlePositionClick = (position) => {
+    setSelectedPosition(position)
+  }
+
+  const handleSaveLineup = () => {
+    const newLineup = {
+      ...lineup,
+      id: Date.now().toString(),
+      date: new Date().toISOString(),
+    }
+    const updatedLineups = [...savedLineups, newLineup]
+    setSavedLineups(updatedLineups)
+    localStorage.setItem('savedLineups', JSON.stringify(updatedLineups))
+    toast.success('Your lineup has been saved successfully.')
+  }
+
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
     </div>
