@@ -52,6 +52,19 @@ export default function FootballPitch({
               {player ? (
                 <div className="relative w-full h-full">
                   <div className="absolute inset-0 flex items-center justify-center">{player.number}</div>
+                  {player && (
+                    <Button
+                      variant="destructive"
+                      size="icon"
+                      className="absolute -top-2 -right-2 h-5 w-5 rounded-full"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        onRemovePlayer(position.id)
+                      }}
+                    >
+                      <X className="h-3 w-3" />
+                    </Button>
+                  )}
                 </div>
               ) : (
                 position.shortName
