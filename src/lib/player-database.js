@@ -193,6 +193,33 @@ export const playerDatabase = [
     nationality: "Croatia",
     stats: { pace: 73, shooting: 76, passing: 89, dribbling: 88, defending: 72, physical: 68 },
   },
+  {
+    id: "p31",
+    name: "N'Golo Kante",
+    number: 7,
+    position: "MID",
+    team: "Chelsea",
+    nationality: "France",
+    stats: { pace: 83, shooting: 66, passing: 77, dribbling: 82, defending: 87, physical: 84 },
+  },
+  {
+    id: "p32",
+    name: "Bruno Fernandes",
+    number: 8,
+    position: "MID",
+    team: "Manchester United",
+    nationality: "Portugal",
+    stats: { pace: 77, shooting: 85, passing: 89, dribbling: 84, defending: 68, physical: 75 },
+  },
+  {
+    id: "p33",
+    name: "Toni Kroos",
+    number: 8,
+    position: "MID",
+    team: "Real Madrid",
+    nationality: "Germany",
+    stats: { pace: 65, shooting: 81, passing: 91, dribbling: 84, defending: 72, physical: 73 },
+  },
   // Forwards
   {
     id: "p49",
