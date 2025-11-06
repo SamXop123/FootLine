@@ -220,6 +220,33 @@ export const playerDatabase = [
     nationality: "Germany",
     stats: { pace: 65, shooting: 81, passing: 91, dribbling: 84, defending: 72, physical: 73 },
   },
+  {
+    id: "p36",
+    name: "Pedri",
+    number: 8,
+    position: "MID",
+    team: "Barcelona",
+    nationality: "Spain",
+    stats: { pace: 85, shooting: 70, passing: 86, dribbling: 91, defending: 59, physical: 73 },
+  },
+  {
+    id: "p37",
+    name: "Gavi",
+    number: 6,
+    position: "MID",
+    team: "Barcelona",
+    nationality: "Spain",
+    stats: { pace: 82, shooting: 68, passing: 83, dribbling: 89, defending: 64, physical: 78 },
+  },
+  {
+    id: "p38",
+    name: "Jude Bellingham",
+    number: 5,
+    position: "MID",
+    team: "Real Madrid",
+    nationality: "England",
+    stats: { pace: 75, shooting: 78, passing: 83, dribbling: 85, defending: 75, physical: 82 },
+  },
   // Forwards
   {
     id: "p49",
