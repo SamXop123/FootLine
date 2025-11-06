@@ -86,6 +86,13 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
             </SelectContent>
           </Select>
 
+          <Select value={teamFilter} onValueChange={setTeamFilter}>
+            <SelectTrigger>
+              <SelectValue placeholder="Team" />
+            </SelectTrigger>
+          </Select>
+          <Select value={nationalityFilter} onValueChange={setNationalityFilter}>
+          </Select>
         </div>
 
         <div className="mt-4">
