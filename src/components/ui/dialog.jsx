@@ -24,6 +24,14 @@ const DialogOverlay = React.forwardRef(function DialogOverlay({ className, ...pr
   )
 })
 
+const DialogContent = React.forwardRef(function DialogContent({ className, children, ...props }, ref) {
+  return (
+    <DialogPortal>
+      <DialogOverlay />
+    </DialogPortal>
+  )
+})
+
 const DialogHeader = ({ className, ...props }) => (
   <div className={cn('flex flex-col space-y-1.5 text-center sm:text-left', className)} {...props} />
 )
