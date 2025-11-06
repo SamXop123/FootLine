@@ -16,5 +16,13 @@ export default function PositionWarningDialog({ isOpen, onClose, player, positio
   const targetPosition = positionNames[position.type]
 
   return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader>
+        </DialogHeader>
+        <DialogFooter className="flex space-x-2 sm:justify-end">
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   )
 }
