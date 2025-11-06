@@ -374,4 +374,13 @@ export const playerDatabase = [
     nationality: "England",
     stats: { pace: 75, shooting: 82, passing: 85, dribbling: 87, defending: 35, physical: 65 },
   },
+  {
+    id: "p148",
+    name: "Thiago Silva",
+    number: 6,
+    position: "DEF",
+    team: "Fluminense",
+    nationality: "Brazil",
+    stats: { pace: 70, shooting: 60, passing: 75, dribbling: 72, defending: 88, physical: 80 },
+  },
 ]
