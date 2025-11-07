@@ -19,6 +19,13 @@ export default function PositionWarningDialog({ isOpen, onClose, player, positio
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
+          <DialogTitle className="flex items-center gap-2">
+            <AlertTriangle className="h-5 w-5 text-yellow-500" />
+            Non-standard Position
+          </DialogTitle>
+          <DialogDescription>
+            You're placing a {playerNaturalPosition} in a {targetPosition} position.
+          </DialogDescription>
         </DialogHeader>
         <DialogFooter className="flex space-x-2 sm:justify-end">
         </DialogFooter>
