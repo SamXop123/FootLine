@@ -65,6 +65,22 @@ export default function FootballPitch({
                       <X className="h-3 w-3" />
                     </Button>
                   )}
+                  {nonStandardPos && (
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <div className="absolute -bottom-2 -right-2 h-5 w-5 bg-yellow-500 rounded-full flex items-center justify-center">
+                            <AlertTriangle className="h-3 w-3 text-white" />
+                          </div>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>
+                            {player.name} is a {player.position} playing in a {position.type} position
+                          </p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  )}
                 </div>
               ) : (
                 position.shortName
