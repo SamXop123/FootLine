@@ -90,7 +90,16 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
             <SelectTrigger>
               <SelectValue placeholder="Team" />
             </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Teams</SelectItem>
+              {teams.map((team) => (
+                <SelectItem key={team} value={team}>
+                  {team}
+                </SelectItem>
+              ))}
+            </SelectContent>
           </Select>
+
           <Select value={nationalityFilter} onValueChange={setNationalityFilter}>
           </Select>
         </div>
