@@ -90,6 +90,10 @@ export default function LineupBuilder() {
     toast.success('Your lineup has been saved successfully.')
   }
 
+  const handleShareLineup = () => {
+    navigator.clipboard.writeText(`Check out my FootLine lineup: ${lineup.name} (${lineup.formation.name})`)
+    toast.success('Shareable link copied to clipboard.')
+  }
 
   const handleLoadLineup = (savedLineup) => {
     setLineup(savedLineup)
@@ -102,6 +106,12 @@ export default function LineupBuilder() {
     setSavedLineups(updatedLineups)
     localStorage.setItem('savedLineups', JSON.stringify(updatedLineups))
     toast.success('Your lineup has been deleted.')
+  }
+
+  const handleGenerateAILineup = () => {
+    const aiLineup = generateRandomLineup(playerDatabase, selectedFormation)
+    setLineup(aiLineup)
+    toast.success(`Created a ${selectedFormation.name} lineup based on player stats.`)
   }
 
   return (
