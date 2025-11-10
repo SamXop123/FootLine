@@ -71,6 +71,21 @@ export default function LineupBuilder() {
     }
   }
 
+  const handleConfirmNonStandardPosition = () => {
+    if (pendingPlayer && pendingPosition) {
+      assignPlayerToPosition(pendingPlayer, pendingPosition)
+      toast.warning(`${pendingPlayer.name} has been placed in a non-standard position.`)
+    }
+    setShowPositionWarning(false)
+    setPendingPlayer(null)
+    setPendingPosition(null)
+  }
+
+  const handleCancelNonStandardPosition = () => {
+    setShowPositionWarning(false)
+    setPendingPlayer(null)
+    setPendingPosition(null)
+  }
 
   const handleRemovePlayer = (positionId) => {
     const newLineup = { ...lineup }
