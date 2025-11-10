@@ -27,6 +27,14 @@ export default function PositionWarningDialog({ isOpen, onClose, player, positio
             You're placing a {playerNaturalPosition} in a {targetPosition} position.
           </DialogDescription>
         </DialogHeader>
+        <div className="space-y-4">
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-md">
+            <p className="text-sm">
+              <span className="font-bold">{player.name}</span> typically plays as a {playerNaturalPosition}. Placing them in a {targetPosition} position may affect their performance.
+            </p>
+            <p className="text-sm mt-2">Do you want to proceed with this unconventional placement?</p>
+          </div>
+        </div>
         <DialogFooter className="flex space-x-2 sm:justify-end">
         </DialogFooter>
       </DialogContent>
