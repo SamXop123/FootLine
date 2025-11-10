@@ -132,6 +132,21 @@ export default function LineupBuilder() {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <TabsList className="grid w-full grid-cols-2 mb-6">
+          <TabsTrigger value="build">Build Lineup</TabsTrigger>
+          <TabsTrigger value="saved">Saved Lineups</TabsTrigger>
+        </TabsList>
+
+
+              <FootballPitch
+                formation={selectedFormation}
+                lineup={lineup}
+                onPositionClick={handlePositionClick}
+                selectedPosition={selectedPosition}
+                onRemovePlayer={handleRemovePlayer}
+              />
+            </div>
+
         <TabsContent value="saved">
           <SavedLineups lineups={savedLineups} onLoad={handleLoadLineup} onDelete={handleDeleteLineup} />
         </TabsContent>
