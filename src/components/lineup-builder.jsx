@@ -147,6 +147,17 @@ export default function LineupBuilder() {
               />
             </div>
 
+            <div className="lg:w-1/3">
+              <PlayerSearch
+                onPlayerSelect={handlePlayerSelect}
+                selectedPosition={selectedPosition}
+                currentLineup={lineup}
+                showAllPositions={true}
+              />
+            </div>
+          </div>
+        </TabsContent>
+
         <TabsContent value="saved">
           <SavedLineups lineups={savedLineups} onLoad={handleLoadLineup} onDelete={handleDeleteLineup} />
         </TabsContent>
