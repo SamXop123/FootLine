@@ -36,6 +36,10 @@ export default function PositionWarningDialog({ isOpen, onClose, player, positio
           </div>
         </div>
         <DialogFooter className="flex space-x-2 sm:justify-end">
+          <Button variant="outline" onClick={onCancel}>
+            Cancel
+          </Button>
+          <Button onClick={onConfirm}>Proceed Anyway</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
