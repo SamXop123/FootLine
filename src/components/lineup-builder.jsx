@@ -163,6 +163,14 @@ export default function LineupBuilder() {
         </TabsContent>
       </Tabs>
 
+      <PositionWarningDialog
+        isOpen={showPositionWarning}
+        onClose={() => setShowPositionWarning(false)}
+        player={pendingPlayer}
+        position={pendingPosition}
+        onConfirm={handleConfirmNonStandardPosition}
+        onCancel={handleCancelNonStandardPosition}
+      />
     </div>
   )
 }
