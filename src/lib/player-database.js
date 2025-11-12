@@ -532,10 +532,35 @@ export const playerDatabase = [
     nationality: "England",
     stats: { pace: 82, shooting: 72, passing: 84, dribbling: 90, defending: 43, physical: 65 },
   },
+  {
+    id: "p78",
+    name: "Marcus Rashford",
+    number: 10,
+    position: "FWD",
+    team: "Manchester United",
+    nationality: "England",
+    stats: { pace: 93, shooting: 85, passing: 78, dribbling: 85, defending: 44, physical: 77 },
+  },
+  {
+    id: "p79",
+    name: "Raheem Sterling",
+    number: 17,
     position: "FWD",
     team: "Chelsea",
     nationality: "England",
-    stats: { pace: 75, shooting: 82, passing: 85, dribbling: 87, defending: 35, physical: 65 },
+    stats: { pace: 90, shooting: 82, passing: 81, dribbling: 88, defending: 45, physical: 63 },
+  },
+  {
+    id: "p80",
+    name: "Antony",
+    number: 21,
+    position: "FWD",
+    team: "Manchester United",
+    nationality: "Brazil",
+    stats: { pace: 82, shooting: 75, passing: 75, dribbling: 85, defending: 35, physical: 70 },
+  },
+
+  // Additional International Stars
   {
     id: "p82",
     name: "Eduardo Camavinga",
@@ -553,6 +578,15 @@ export const playerDatabase = [
     team: "Real Madrid",
     nationality: "France",
     stats: { pace: 78, shooting: 70, passing: 80, dribbling: 75, defending: 85, physical: 88 },
+  },
+  {
+    id: "p86",
+    name: "Enzo Fernandez",
+    number: 5,
+    position: "MID",
+    team: "Chelsea",
+    nationality: "Argentina",
+    stats: { pace: 75, shooting: 78, passing: 87, dribbling: 84, defending: 75, physical: 75 },
   },
   {
     id: "p91",
@@ -581,6 +615,35 @@ export const playerDatabase = [
     nationality: "Georgia",
     stats: { pace: 90, shooting: 80, passing: 78, dribbling: 92, defending: 25, physical: 70 },
   },
+  {
+    id: "p98",
+    name: "Ousmane Dembele",
+    number: 10,
+    position: "FWD",
+    team: "Paris Saint-Germain",
+    nationality: "France",
+    stats: { pace: 96, shooting: 78, passing: 75, dribbling: 89, defending: 25, physical: 65 },
+  },
+  {
+    id: "p99",
+    name: "Julian Alvarez",
+    number: 19,
+    position: "FWD",
+    team: "Manchester City",
+    nationality: "Argentina",
+    stats: { pace: 85, shooting: 82, passing: 78, dribbling: 84, defending: 50, physical: 70 },
+  },
+  {
+    id: "p100",
+    name: "Joao Felix",
+    number: 11,
+    position: "FWD",
+    team: "Chelsea",
+    nationality: "Portugal",
+    stats: { pace: 83, shooting: 84, passing: 85, dribbling: 90, defending: 25, physical: 65 },
+  },
+
+  // More Defenders
   {
     id: "p101",
     name: "William Saliba",
