@@ -116,6 +116,12 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
         </div>
 
         <div className="mt-4">
+          <h3 className="text-sm font-medium mb-2">{filteredPlayers.length} Players Found</h3>
+
+          <ScrollArea className="h-[300px] rounded-md border">
+            <div className="p-4 space-y-4">
+            </div>
+          </ScrollArea>
         </div>
       </div>
     </div>
