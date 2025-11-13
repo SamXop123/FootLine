@@ -44,6 +44,13 @@ const SelectScrollDownButton = React.forwardRef(function SelectScrollDownButton(
   )
 })
 
+const SelectContent = React.forwardRef(function SelectContent({ className, children, position = 'popper', ...props }, ref) {
+  return (
+    <SelectPrimitive.Portal>
+    </SelectPrimitive.Portal>
+  )
+})
+
 const SelectLabel = React.forwardRef(function SelectLabel({ className, ...props }, ref) {
   return <SelectPrimitive.Label ref={ref} className={cn('py-1.5 pl-8 pr-2 text-sm font-semibold', className)} {...props} />
 })
