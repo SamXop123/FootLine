@@ -52,6 +52,12 @@ const SelectContent = React.forwardRef(function SelectContent({ className, child
         className={cn(
         )}
       >
+        <SelectScrollUpButton />
+        <SelectPrimitive.Viewport
+        >
+        </SelectPrimitive.Viewport>
+        <SelectScrollDownButton />
+      </SelectPrimitive.Content>
     </SelectPrimitive.Portal>
   )
 })
