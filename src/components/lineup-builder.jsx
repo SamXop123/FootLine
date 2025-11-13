@@ -137,6 +137,18 @@ export default function LineupBuilder() {
           <TabsTrigger value="saved">Saved Lineups</TabsTrigger>
         </TabsList>
 
+              <div className="mb-4 flex flex-wrap gap-2">
+                {formations.map((formation) => (
+                  <Button
+                    key={formation.name}
+                    variant={selectedFormation.name === formation.name ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => handleFormationChange(formation)}
+                  >
+                    {formation.name}
+                  </Button>
+                ))}
+              </div>
 
               <FootballPitch
                 formation={selectedFormation}
