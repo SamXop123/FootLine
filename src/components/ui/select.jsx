@@ -92,6 +92,8 @@ const SelectSeparator = React.forwardRef(function SelectSeparator({ className, .
 
 export {
   Select,
+  SelectGroup,
+  SelectValue,
   SelectTrigger,
   SelectContent,
   SelectLabel,
