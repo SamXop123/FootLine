@@ -120,6 +120,18 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
 
           <ScrollArea className="h-[300px] rounded-md border">
             <div className="p-4 space-y-4">
+              {filteredPlayers.length > 0 ? (
+                filteredPlayers.map((player) => (
+                  <PlayerCard
+                    key={player.id}
+                    player={player}
+                    onSelect={onPlayerSelect}
+                    isInLineup={currentLineup.players.some((p) => p && p.id === player.id)}
+                  />
+                ))
+              ) : (
+                <div className="text-center py-8 text-gray-500">No players match your search criteria</div>
+              )}
             </div>
           </ScrollArea>
         </div>
