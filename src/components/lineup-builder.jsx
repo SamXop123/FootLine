@@ -137,6 +137,27 @@ export default function LineupBuilder() {
           <TabsTrigger value="saved">Saved Lineups</TabsTrigger>
         </TabsList>
 
+        <TabsContent value="build" className="space-y-6">
+          <div className="flex flex-col lg:flex-row gap-6">
+            <div className="lg:w-2/3">
+              <div className="flex flex-wrap items-center justify-between mb-4">
+                <h2 className="text-2xl font-bold text-green-800 dark:text-green-300">Pitch View</h2>
+                <div className="flex gap-2">
+                  <Button variant="outline" size="sm" onClick={handleSaveLineup}>
+                    <Save className="h-4 w-4 mr-2" />
+                    Save
+                  </Button>
+                  <Button variant="outline" size="sm" onClick={handleShareLineup}>
+                    <Share2 className="h-4 w-4 mr-2" />
+                    Share
+                  </Button>
+                  <Button variant="outline" size="sm" onClick={handleGenerateAILineup}>
+                    <RefreshCw className="h-4 w-4 mr-2" />
+                    AI Suggest
+                  </Button>
+                </div>
+              </div>
+
               <div className="mb-4 flex flex-wrap gap-2">
                 {formations.map((formation) => (
                   <Button
