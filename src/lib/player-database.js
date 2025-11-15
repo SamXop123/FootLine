@@ -202,6 +202,15 @@ export const playerDatabase = [
     stats: { pace: 83, shooting: 60, passing: 68, dribbling: 70, defending: 85, physical: 84 },
   },
   {
+    id: "p23",
+    name: "Milan Skriniar",
+    number: 37,
+    position: "DEF",
+    team: "Paris Saint-Germain",
+    nationality: "Slovakia",
+    stats: { pace: 74, shooting: 58, passing: 70, dribbling: 68, defending: 86, physical: 84 },
+  },
+  {
     id: "p24",
     name: "Alessandro Bastoni",
     number: 95,
@@ -237,6 +246,16 @@ export const playerDatabase = [
     nationality: "Spain",
     stats: { pace: 84, shooting: 77, passing: 86, dribbling: 85, defending: 78, physical: 73 },
   },
+  {
+    id: "p28",
+    name: "Mats Hummels",
+    number: 5,
+    position: "DEF",
+    team: "Borussia Dortmund",
+    nationality: "Germany",
+    stats: { pace: 60, shooting: 65, passing: 84, dribbling: 70, defending: 86, physical: 83 },
+  },
+
   // Midfielders
   {
     id: "p29",
@@ -365,6 +384,15 @@ export const playerDatabase = [
     stats: { pace: 70, shooting: 72, passing: 85, dribbling: 80, defending: 85, physical: 83 },
   },
   {
+    id: "p43",
+    name: "Thiago Alcantara",
+    number: 6,
+    position: "MID",
+    team: "Liverpool",
+    nationality: "Spain",
+    stats: { pace: 65, shooting: 70, passing: 89, dribbling: 90, defending: 70, physical: 65 },
+  },
+  {
     id: "p44",
     name: "Paul Pogba",
     number: 6,
@@ -381,6 +409,15 @@ export const playerDatabase = [
     team: "Arsenal",
     nationality: "England",
     stats: { pace: 71, shooting: 64, passing: 81, dribbling: 73, defending: 87, physical: 86 },
+  },
+  {
+    id: "p46",
+    name: "Leon Goretzka",
+    number: 8,
+    position: "MID",
+    team: "Bayern Munich",
+    nationality: "Germany",
+    stats: { pace: 76, shooting: 80, passing: 79, dribbling: 80, defending: 76, physical: 87 },
   },
   {
     id: "p47",
@@ -590,6 +627,33 @@ export const playerDatabase = [
     team: "Chelsea",
     nationality: "France",
     stats: { pace: 83, shooting: 85, passing: 84, dribbling: 87, defending: 52, physical: 67 },
+  },
+  {
+    id: "p70",
+    name: "Dusan Vlahovic",
+    number: 7,
+    position: "FWD",
+    team: "Juventus",
+    nationality: "Serbia",
+    stats: { pace: 75, shooting: 87, passing: 70, dribbling: 75, defending: 25, physical: 85 },
+  },
+  {
+    id: "p71",
+    name: "Ciro Immobile",
+    number: 17,
+    position: "FWD",
+    team: "Lazio",
+    nationality: "Italy",
+    stats: { pace: 82, shooting: 87, passing: 75, dribbling: 80, defending: 25, physical: 78 },
+  },
+  {
+    id: "p72",
+    name: "Memphis Depay",
+    number: 10,
+    position: "FWD",
+    team: "Atletico Madrid",
+    nationality: "Netherlands",
+    stats: { pace: 85, shooting: 84, passing: 80, dribbling: 87, defending: 25, physical: 78 },
   },
   {
     id: "p73",
