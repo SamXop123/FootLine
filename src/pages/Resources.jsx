@@ -111,35 +111,37 @@ export default function Resources() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4 text-purple-800 dark:text-purple-300">Helpful Football Resources</h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Discover the best football websites for news, statistics, tactics, and community discussions
+            Discover the best football websites for news, statistics, tactics, streaming, and community discussions.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2">
           {resources.map((category) => {
             const Icon = category.icon
             return (
-              <Card key={category.category} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-purple-200 dark:border-purple-700">
+              <Card key={category.category} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-purple-200 dark:border-purple-700 hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2 text-purple-700 dark:text-purple-300">
                     <Icon className="w-5 h-5" />
                     <span>{category.category}</span>
+                    <Badge variant="secondary" className="ml-auto text-xs">
+                      {category.items.length}
+                    </Badge>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-3">
                   {category.items.map((item) => (
                     <a
                       key={item.name}
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block p-4 rounded-lg bg-purple-50 dark:bg-purple-900/30 hover:bg-purple-100 dark:hover:bg-purple-900/50 transition-colors duration-200 group"
+                      className="block p-3 rounded-lg bg-purple-50 dark:bg-purple-900/30 hover:bg-purple-100 dark:hover:bg-purple-900/50 transition-colors duration-200 group"
                     >
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <h3 className="font-semibold text-purple-800 dark:text-purple-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 flex items-center space-x-2">
-                            <span>{item.name}</span>
-                            <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="text-center">
+                        <div className="flex items-center justify-center space-x-2 mb-1">
+                          <h3 className="font-semibold text-purple-800 dark:text-purple-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 truncate">
+                            {item.name}
                           </h3>
                           <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                             {item.description}
