@@ -1,41 +1,105 @@
-import { ExternalLink, Globe, BookOpen, Tv, Users } from 'lucide-react'
+import { ExternalLink, Globe, BookOpen, Tv, Users, Trophy, Target, BarChart3, Play, Gamepad2, Smartphone, Star, Clock, TrendingUp } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 
 const resources = [
   {
     category: 'Official Sites',
     icon: Globe,
     items: [
-      { name: 'Premier League', url: 'https://www.premierleague.com', description: 'Official PL website with fixtures, stats, and news' },
-      { name: 'UEFA', url: 'https://www.uefa.com', description: 'European competitions and international football' },
-      { name: 'FIFA', url: 'https://www.fifa.com', description: 'World football governing body' },
+      { name: 'Premier League', url: 'https://www.premierleague.com', description: 'Official PL website with fixtures, stats, and news', badge: 'PL' },
+      { name: 'UEFA', url: 'https://www.uefa.com', description: 'European competitions and international football', badge: 'EU' },
+      { name: 'FIFA', url: 'https://www.fifa.com', description: 'World football governing body', badge: 'FIFA' },
+      { name: 'La Liga', url: 'https://www.laliga.com', description: 'Spanish football official website', badge: 'ES' },
+      { name: 'Serie A', url: 'https://www.legaseriea.it', description: 'Italian football official website', badge: 'IT' },
+      { name: 'Bundesliga', url: 'https://www.bundesliga.com', description: 'German football official website', badge: 'DE' },
     ]
   },
   {
     category: 'News & Analysis',
     icon: BookOpen,
     items: [
-      { name: 'BBC Sport - Football', url: 'https://www.bbc.co.uk/sport/football', description: 'Comprehensive football news and analysis' },
-      { name: 'ESPN FC', url: 'https://www.espn.com/soccer', description: 'Latest football news and features' },
-      { name: 'The Athletic', url: 'https://www.theathletic.com/football', description: 'In-depth football journalism' },
+      { name: 'BBC Sport - Football', url: 'https://www.bbc.co.uk/sport/football', description: 'Comprehensive football news and analysis', badge: 'UK' },
+      { name: 'ESPN FC', url: 'https://www.espn.com/soccer', description: 'Latest football news and features', badge: 'US' },
+      { name: 'The Athletic', url: 'https://www.theathletic.com/football', description: 'In-depth football journalism', badge: 'Premium' },
+      { name: 'Sky Sports', url: 'https://www.skysports.com/football', description: 'Premier League coverage and analysis', badge: 'UK' },
+      { name: 'Goal.com', url: 'https://www.goal.com', description: 'Global football news and rumors', badge: 'Global' },
+      { name: 'Guardian Football', url: 'https://www.theguardian.com/football', description: 'Quality football journalism', badge: 'UK' },
     ]
   },
   {
     category: 'Statistics & Data',
-    icon: Tv,
+    icon: BarChart3,
     items: [
-      { name: 'Transfermarkt', url: 'https://www.transfermarkt.com', description: 'Player values, transfers, and statistics' },
-      { name: 'FBref', url: 'https://fbref.com', description: 'Comprehensive football statistics' },
-      { name: 'WhoScored', url: 'https://www.whoscored.com', description: 'Detailed player ratings and match analysis' },
+      { name: 'Transfermarkt', url: 'https://www.transfermarkt.com', description: 'Player values, transfers, and statistics', badge: 'Market' },
+      { name: 'FBref', url: 'https://fbref.com', description: 'Comprehensive football statistics', badge: 'Stats' },
+      { name: 'WhoScored', url: 'https://www.whoscored.com', description: 'Detailed player ratings and match analysis', badge: 'Ratings' },
+      { name: 'Sofascore', url: 'https://www.sofascore.com', description: 'Live scores and detailed statistics', badge: 'Live' },
+      { name: 'Understat', url: 'https://understat.com', description: 'Expected goals (xG) and advanced stats', badge: 'xG' },
+      { name: 'Opta Analyst', url: 'https://theanalyst.com', description: 'Professional football analytics', badge: 'Pro' },
+    ]
+  },
+  {
+    category: 'Tactical Analysis',
+    icon: Target,
+    items: [
+      { name: 'Twitter - Tactical Accounts', url: 'https://twitter.com', description: 'Follow tactical analysts like @BetweenThePosts', badge: 'Social' },
+      { name: 'Football Manager', url: 'https://www.footballmanager.com', description: 'Tactical insights from simulation game', badge: 'Game' },
+      { name: 'Betfair Insights', url: 'https://www.betfair.com/insights/football', description: 'Betting-driven tactical analysis', badge: 'Betting' },
+      { name: 'StatsBomb', url: 'https://statsbomb.com', description: 'Advanced football analytics and data', badge: 'Analytics' },
+    ]
+  },
+  {
+    category: 'Live Streaming & TV',
+    icon: Play,
+    items: [
+      { name: 'Sky Sports', url: 'https://www.skysports.com/watch', description: 'Premier League broadcasts', badge: 'Paid' },
+      { name: 'BT Sport', url: 'https://www.bt.com/sport', description: 'Champions League and more', badge: 'Paid' },
+      { name: 'Peacock', url: 'https://www.peacocktv.com/sports', description: 'Premier League streaming in US', badge: 'US' },
+      { name: 'ESPN+', url: 'https://www.espn.com/espnplus', description: 'Bundesliga and other leagues', badge: 'US' },
+      { name: 'Paramount+', url: 'https://www.paramountplus.com', description: 'Champions League in US', badge: 'US' },
+    ]
+  },
+  {
+    category: 'Mobile Apps',
+    icon: Smartphone,
+    items: [
+      { name: 'OneFootball', url: 'https://www.onefootball.com', description: 'News, scores, and updates', badge: 'Free' },
+      { name: 'ESPN App', url: 'https://www.espn.com/espn/apps/espn', description: 'Comprehensive sports coverage', badge: 'Free' },
+      { name: 'BBC Sport', url: 'https://www.bbc.co.uk/sport/football/app', description: 'UK football news app', badge: 'Free' },
+      { name: 'FotMob', url: 'https://www.fotmob.com', description: 'Live scores and detailed stats', badge: 'Free' },
+      { name: 'Sofascore', url: 'https://www.sofascore.com/mobile', description: 'Live scores with detailed analytics', badge: 'Free' },
+    ]
+  },
+  {
+    category: 'Gaming & Fantasy',
+    icon: Gamepad2,
+    items: [
+      { name: 'Fantasy Premier League', url: 'https://fantasy.premierleague.com', description: 'Official PL fantasy game', badge: 'Free' },
+      { name: 'FIFA Ultimate Team', url: 'https://www.ea.com/games/fifa/fifa-ultimate-team', description: 'Build your dream team', badge: 'Game' },
+      { name: 'Football Manager', url: 'https://www.footballmanager.com', description: 'Management simulation game', badge: 'Game' },
+      { name: 'Dream Team', url: 'https://www.dreamteamfc.com', description: 'Fantasy football game', badge: 'Free' },
     ]
   },
   {
     category: 'Community & Forums',
     icon: Users,
     items: [
-      { name: 'Reddit Soccer', url: 'https://www.reddit.com/r/soccer', description: 'Football discussion community' },
-      { name: 'Football Manager Forum', url: 'https://community.sigames.com', description: 'Tactical discussion and insights' },
-      { name: 'r/FootballManagerGames', url: 'https://www.reddit.com/r/FootballManagerGames', description: 'FM tactics and discussion' },
+      { name: 'Reddit Soccer', url: 'https://www.reddit.com/r/soccer', description: 'Football discussion community', badge: 'Forum' },
+      { name: 'Reddit Football Manager', url: 'https://www.reddit.com/r/FootballManagerGames', description: 'FM tactics and discussion', badge: 'Forum' },
+      { name: 'BigSoccer', url: 'https://www.bigsoccer.com', description: 'American soccer community', badge: 'Forum' },
+      { name: 'Twitter Football', url: 'https://twitter.com', description: 'Real-time football discussions', badge: 'Social' },
+      { name: 'Discord Football Servers', url: 'https://discord.com', description: 'Real-time chat communities', badge: 'Chat' },
+    ]
+  },
+  {
+    category: 'Transfer News',
+    icon: TrendingUp,
+    items: [
+      { name: 'Transfermarkt', url: 'https://www.transfermarkt.com/transfers/neueste-transfers/statistik', description: 'Latest transfer news and rumors', badge: 'Market' },
+      { name: 'Fabrizio Romano', url: 'https://twitter.com/FabrizioRomano', description: 'Renowned transfer journalist', badge: 'Journalist' },
+      { name: 'Goal Transfers', url: 'https://www.goal.com/transfers', description: 'Transfer news and rumors', badge: 'News' },
+      { name: 'BBC Transfer Tracker', url: 'https://www.bbc.co.uk/sport/football/transfers', description: 'BBC transfer coverage', badge: 'News' },
     ]
   }
 ]
@@ -102,6 +166,8 @@ export default function Resources() {
             </CardContent>
           </Card>
         </div>
+
+        
       </div>
     </main>
   )
