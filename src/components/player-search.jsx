@@ -8,18 +8,18 @@ import { playerDatabase } from '@/lib/player-database'
 import PlayerCard from '@/components/player-card'
 import { Badge } from '@/components/ui/badge'
 
-export default function PlayerSearch({ onPlayerSelect, selectedPosition, currentLineup, showAllPositions = true }) {
+export default function PlayerSearch({ onPlayerSelect, selectedPosition, currentLineup, showAllPositions = true, playerDatabase: customPlayerDatabase = playerDatabase }) {
   const [searchTerm, setSearchTerm] = useState('')
-  const [filteredPlayers, setFilteredPlayers] = useState(playerDatabase)
+  const [filteredPlayers, setFilteredPlayers] = useState(customPlayerDatabase)
   const [positionFilter, setPositionFilter] = useState('all')
   const [teamFilter, setTeamFilter] = useState('all')
   const [nationalityFilter, setNationalityFilter] = useState('all')
 
-  const teams = Array.from(new Set(playerDatabase.map((player) => player.team)))
-  const nationalities = Array.from(new Set(playerDatabase.map((player) => player.nationality)))
+  const teams = Array.from(new Set(customPlayerDatabase.map((player) => player.team)))
+  const nationalities = Array.from(new Set(customPlayerDatabase.map((player) => player.nationality)))
 
   useEffect(() => {
-    let results = playerDatabase
+    let results = customPlayerDatabase
 
     if (searchTerm) {
       results = results.filter((player) => player.name.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -40,7 +40,7 @@ export default function PlayerSearch({ onPlayerSelect, selectedPosition, current
     }
 
     setFilteredPlayers(results)
-  }, [searchTerm, positionFilter, teamFilter, nationalityFilter, selectedPosition, showAllPositions])
+  }, [searchTerm, positionFilter, teamFilter, nationalityFilter, selectedPosition, showAllPositions, customPlayerDatabase])
 
   const handleResetFilters = () => {
     setSearchTerm('')
