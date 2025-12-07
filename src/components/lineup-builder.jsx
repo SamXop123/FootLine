@@ -10,8 +10,9 @@ import { formations } from '@/lib/formations'
 import { generateRandomLineup } from '@/lib/utils'
 import { toast } from 'react-toastify'
 import { playerDatabase } from '@/lib/player-database'
+import { premierLeagueDatabase } from '@/lib/premier-league-database'
 
-export default function LineupBuilder() {
+export default function LineupBuilder({ league = 'all' }) {
   const [activeTab, setActiveTab] = useState('build')
   const [selectedFormation, setSelectedFormation] = useState(formations[0])
   const [lineup, setLineup] = useState({
@@ -25,6 +26,9 @@ export default function LineupBuilder() {
   const [showPositionWarning, setShowPositionWarning] = useState(false)
   const [pendingPlayer, setPendingPlayer] = useState(null)
   const [pendingPosition, setPendingPosition] = useState(null)
+
+  // Select the appropriate database based on league
+  const currentPlayerDatabase = league === 'premier-league' ? premierLeagueDatabase : playerDatabase
 
   useEffect(() => {
     const saved = localStorage.getItem('savedLineups')
@@ -124,7 +128,7 @@ export default function LineupBuilder() {
   }
 
   const handleGenerateAILineup = () => {
-    const aiLineup = generateRandomLineup(playerDatabase, selectedFormation)
+    const aiLineup = generateRandomLineup(currentPlayerDatabase, selectedFormation)
     setLineup(aiLineup)
     toast.success(`Created a ${selectedFormation.name} lineup based on player stats.`)
   }
@@ -186,6 +190,7 @@ export default function LineupBuilder() {
                 selectedPosition={selectedPosition}
                 currentLineup={lineup}
                 showAllPositions={true}
+                playerDatabase={currentPlayerDatabase}
               />
             </div>
           </div>
