@@ -143,11 +143,19 @@ export default function Resources() {
                           <h3 className="font-semibold text-purple-800 dark:text-purple-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 truncate">
                             {item.name}
                           </h3>
-                          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                            {item.description}
-                          </p>
+                          <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
                         </div>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 text-center">
+                          {item.description}
+                        </p>
                       </div>
+                      {item.badge && (
+                        <div className="flex justify-center mt-2">
+                          <Badge variant="outline" className="text-xs bg-white/50 dark:bg-gray-800/50">
+                            {item.badge}
+                          </Badge>
+                        </div>
+                      )}
                     </a>
                   ))}
                 </CardContent>
@@ -156,7 +164,7 @@ export default function Resources() {
           })}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
           <Card className="bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 border-purple-300 dark:border-purple-600">
             <CardContent className="p-6">
               <h3 className="text-lg font-semibold text-purple-800 dark:text-purple-200 mb-2">
