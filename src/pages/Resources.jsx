@@ -185,6 +185,23 @@ export default function Resources() {
             </CardContent>
           </Card>
 
+          <Card className="bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 border-blue-300 dark:border-blue-600">
+            <CardContent className="p-6">
+              <div className="flex items-center space-x-3 mb-3">
+                <Clock className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200">
+                  Quick Access
+                </h3>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400 text-left mb-4">
+                Bookmark this page for quick access to all your football resources
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">Live Scores</Badge>
+                <Badge variant="secondary">News</Badge>
+                <Badge variant="secondary">Stats</Badge>
+                <Badge variant="secondary">Community</Badge>
+              </div>
             </CardContent>
           </Card>
         </div>
