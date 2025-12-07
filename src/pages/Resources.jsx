@@ -167,12 +167,24 @@ export default function Resources() {
         <div className="mt-16 grid gap-8 md:grid-cols-2">
           <Card className="bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 border-purple-300 dark:border-purple-600">
             <CardContent className="p-6">
-              <h3 className="text-lg font-semibold text-purple-800 dark:text-purple-200 mb-2">
-                Want to suggest a resource?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <div className="flex items-center space-x-3 mb-3">
+                <Star className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                <h3 className="text-lg font-semibold text-purple-800 dark:text-purple-200">
+                  Want to suggest a resource?
+                </h3>
+              </div>
+              <p className="text-gray-600 text-left dark:text-gray-400 mb-4">
                 Help us build the best collection of football resources by suggesting your favorite sites
               </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">News</Badge>
+                <Badge variant="secondary">Stats</Badge>
+                <Badge variant="secondary">Tactics</Badge>
+                <Badge variant="secondary">Apps</Badge>
+              </div>
+            </CardContent>
+          </Card>
+
             </CardContent>
           </Card>
         </div>
