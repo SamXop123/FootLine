@@ -190,6 +190,10 @@ export default function LineupBuilder({ league = 'all' }) {
                     <Share2 className="h-4 w-4 mr-2" />
                     Share
                   </Button>
+                  <Button variant="outline" size="sm" onClick={handleExportImage}>
+                    <Download className="h-4 w-4 mr-2" />
+                    Export
+                  </Button>
                   <Button variant="outline" size="sm" onClick={handleGenerateAILineup}>
                     <RefreshCw className="h-4 w-4 mr-2" />
                     AI Suggest
@@ -210,13 +214,19 @@ export default function LineupBuilder({ league = 'all' }) {
                 ))}
               </div>
 
-              <FootballPitch
-                formation={selectedFormation}
-                lineup={lineup}
-                onPositionClick={handlePositionClick}
-                selectedPosition={selectedPosition}
-                onRemovePlayer={handleRemovePlayer}
-              />
+              <div id="lineup-export" className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
+                <div className="text-center mb-4">
+                  <h3 className="text-2xl font-bold text-green-800 dark:text-green-300">{lineup.name}</h3>
+                  <p className="text-lg text-green-600 dark:text-green-400">{selectedFormation.name}</p>
+                </div>
+                <FootballPitch
+                  formation={selectedFormation}
+                  lineup={lineup}
+                  onPositionClick={handlePositionClick}
+                  selectedPosition={selectedPosition}
+                  onRemovePlayer={handleRemovePlayer}
+                />
+              </div>
             </div>
 
             <div className="lg:w-1/3">
