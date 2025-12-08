@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Button } from '@/components/ui/button'
-import { Share2, Save, RefreshCw } from 'lucide-react'
+import { Share2, Save, RefreshCw, Download } from 'lucide-react'
 import FootballPitch from '@/components/football-pitch'
 import PlayerSearch from '@/components/player-search'
 import SavedLineups from '@/components/saved-lineups'
@@ -11,6 +11,7 @@ import { generateRandomLineup } from '@/lib/utils'
 import { toast } from 'react-toastify'
 import { playerDatabase } from '@/lib/player-database'
 import { premierLeagueDatabase } from '@/lib/premier-league-database'
+import html2canvas from 'html2canvas'
 
 export default function LineupBuilder({ league = 'all' }) {
   const [activeTab, setActiveTab] = useState('build')
@@ -112,6 +113,40 @@ export default function LineupBuilder({ league = 'all' }) {
   const handleShareLineup = () => {
     navigator.clipboard.writeText(`Check out my FootLine lineup: ${lineup.name} (${lineup.formation.name})`)
     toast.success('Shareable link copied to clipboard.')
+  }
+
+  const handleExportImage = async () => {
+    try {
+      const element = document.getElementById('lineup-export')
+      if (!element) {
+        toast.error('Could not find lineup element to export')
+        return
+      }
+
+      const loadingToast = toast.loading('Generating image...')
+      
+      const canvas = await html2canvas(element, {
+        backgroundColor: '#ffffff',
+        scale: 2,
+        logging: false,
+        useCORS: true,
+      })
+
+      const link = document.createElement('a')
+      link.download = `${lineup.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_lineup.png`
+      link.href = canvas.toDataURL()
+      link.click()
+
+      toast.update(loadingToast, {
+        render: 'Lineup exported successfully!',
+        type: 'success',
+        isLoading: false,
+        autoClose: 3000,
+      })
+    } catch (error) {
+      console.error('Export error:', error)
+      toast.error('Failed to export lineup as image')
+    }
   }
 
   const handleLoadLineup = (savedLineup) => {
