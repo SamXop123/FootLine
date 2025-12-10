@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Button } from '@/components/ui/button'
-import { Share2, Save, RefreshCw, Download } from 'lucide-react'
+import { Share2, Save, RefreshCw, Download, FilePlus } from 'lucide-react'
 import FootballPitch from '@/components/football-pitch'
 import PlayerSearch from '@/components/player-search'
 import SavedLineups from '@/components/saved-lineups'
@@ -149,6 +149,15 @@ export default function LineupBuilder({ league = 'all' }) {
     }
   }
 
+  const handleNewLineup = () => {
+    setLineup({
+      name: 'My Lineup',
+      formation: selectedFormation,
+      players: Array(11).fill(null),
+    })
+    toast.success('Started a new fresh lineup!')
+  }
+
   const handleLoadLineup = (savedLineup) => {
     setLineup(savedLineup)
     setSelectedFormation(savedLineup.formation)
@@ -182,6 +191,10 @@ export default function LineupBuilder({ league = 'all' }) {
               <div className="flex flex-wrap items-center justify-between mb-4">
                 <h2 className="text-2xl font-bold text-green-800 dark:text-green-300">Pitch View</h2>
                 <div className="flex gap-2">
+                  <Button variant="outline" size="sm" onClick={handleNewLineup}>
+                    <FilePlus className="h-4 w-4 mr-2" />
+                    New
+                  </Button>
                   <Button variant="outline" size="sm" onClick={handleSaveLineup}>
                     <Save className="h-4 w-4 mr-2" />
                     Save
