@@ -23,7 +23,7 @@ export default function Navbar() {
               <img 
                 src="/footline-text.png" 
                 alt="FootLine" 
-                className="h-64 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+                className="h-16 w-auto cursor-pointer hover:opacity-80 transition-opacity"
               />
             </Link>
           </div>
