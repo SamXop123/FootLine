@@ -8,6 +8,7 @@ export const playerDatabase = [
     position: "GK",
     team: "Manchester United",
     nationality: "Spain",
+    image: "https://media.api-sports.io/football/players/276.png",
     stats: { diving: 88, handling: 85, kicking: 87, reflexes: 90, speed: 58, positioning: 86 },
   },
   {
@@ -17,6 +18,7 @@ export const playerDatabase = [
     position: "GK",
     team: "Liverpool",
     nationality: "Brazil",
+    image: "https://media.api-sports.io/football/players/182.png",
     stats: { diving: 89, handling: 90, kicking: 85, reflexes: 88, speed: 65, positioning: 87 },
   },
   {
@@ -26,6 +28,7 @@ export const playerDatabase = [
     position: "GK",
     team: "Manchester City",
     nationality: "Brazil",
+    image: "https://media.api-sports.io/football/players/191.png",
     stats: { diving: 86, handling: 85, kicking: 93, reflexes: 88, speed: 70, positioning: 88 },
   },
   {
@@ -327,6 +330,7 @@ export const playerDatabase = [
     position: "MID",
     team: "Manchester City",
     nationality: "Belgium",
+    image: "https://media.api-sports.io/football/players/279.png",
     stats: { pace: 76, shooting: 86, passing: 93, dribbling: 88, defending: 64, physical: 78 },
   },
   {
