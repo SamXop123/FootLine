@@ -13,8 +13,21 @@ export default function PlayerCard({ player, onSelect, isInLineup }) {
   return (
     <div className="flex items-center justify-between p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
       <div className="flex items-center">
-        <div className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center font-bold text-lg mr-3">
-          {player.number}
+        <div className="w-10 h-10 rounded-full overflow-hidden mr-3 relative">
+          {player.image ? (
+            <img 
+              src={player.image} 
+              alt={player.name}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+          ) : null}
+          <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center font-bold text-lg" style={{ display: player.image ? 'none' : 'flex' }}>
+            {player.number}
+          </div>
         </div>
         <div>
           <h3 className="font-medium">{player.name}</h3>
