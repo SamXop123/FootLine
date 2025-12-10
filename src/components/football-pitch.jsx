@@ -51,7 +51,20 @@ export default function FootballPitch({
             >
               {player ? (
                 <div className="relative w-full h-full">
-                  <div className="absolute inset-0 flex items-center justify-center">{player.number}</div>
+                  {player.image ? (
+                    <img 
+                      src={player.image} 
+                      alt={player.name}
+                      className="w-full h-full rounded-full object-cover"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                  ) : null}
+                  <div className="absolute inset-0 flex items-center justify-center bg-blue-500 rounded-full" style={{ display: player.image ? 'none' : 'flex' }}>
+                    {player.number}
+                  </div>
                   {player && (
                     <Button
                       variant="destructive"
