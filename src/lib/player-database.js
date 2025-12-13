@@ -511,8 +511,9 @@ export const playerDatabase = [
     name: "Lionel Messi",
     number: 30,
     position: "FWD",
-    team: "Paris Saint-Germain",
+    team: "Inter Miami CF",
     nationality: "Argentina",
+    image: "https://wallpapers.com/images/thumbnail/lionel-messi-portraitin-argentina-kit-r71zpm3d9yheba7b.webp",
     stats: { pace: 85, shooting: 92, passing: 91, dribbling: 95, defending: 40, physical: 65 },
   },
   {
@@ -522,6 +523,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Al Nassr",
     nationality: "Portugal",
+    image:"https://wallpapers.com/images/hd/cristiano-ronaldo-headshot-0nfym7cbc3ot4trs.jpg",
     stats: { pace: 85, shooting: 93, passing: 80, dribbling: 88, defending: 35, physical: 78 },
   },
   {
@@ -529,8 +531,9 @@ export const playerDatabase = [
     name: "Kylian Mbappe",
     number: 7,
     position: "FWD",
-    team: "Paris Saint-Germain",
+    team: "Real Madrid",
     nationality: "France",
+    image: "https://static.wefut.com/assets/images/fut24/playeravatars/231747.png?242",
     stats: { pace: 97, shooting: 88, passing: 80, dribbling: 92, defending: 36, physical: 78 },
   },
   {
@@ -540,6 +543,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Manchester City",
     nationality: "Norway",
+    image: "https://cdn3.futbin.com/content/fifa23/img/players/239085.png?fm=png&ixlib=java-2.1.0&w=512&s=ebf9129e7aeb2bcc2627bf7eb70ba1b2",
     stats: { pace: 89, shooting: 91, passing: 70, dribbling: 80, defending: 45, physical: 88 },
   },
   {
@@ -549,6 +553,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Barcelona",
     nationality: "Poland",
+    image: "https://cdn.futbin.com/content/fifa21/img/players/188545.png?v=23",
     stats: { pace: 78, shooting: 92, passing: 79, dribbling: 86, defending: 44, physical: 82 },
   },
   {
@@ -558,6 +563,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Al Ittihad",
     nationality: "France",
+    image: "https://www.fifarosters.com/assets/players/fifa24/faces/165153.png",
     stats: { pace: 80, shooting: 88, passing: 83, dribbling: 87, defending: 39, physical: 78 },
   },
   {
@@ -567,6 +573,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Liverpool",
     nationality: "Egypt",
+    image: "https://www.fifarosters.com/assets/players/fifa24/faces/209331.png",
     stats: { pace: 90, shooting: 89, passing: 83, dribbling: 90, defending: 45, physical: 75 },
   },
   {
@@ -576,6 +583,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Al Nassr",
     nationality: "Senegal",
+    image: "https://cdn3.futbin.com/content/fifa25/img/players/208722.png?fm=png&ixlib=java-2.1.0&verzion=2&w=512&s=65522e70a29622e35618764ff40d5485",
     stats: { pace: 90, shooting: 85, passing: 80, dribbling: 90, defending: 44, physical: 76 },
   },
   {
@@ -583,8 +591,9 @@ export const playerDatabase = [
     name: "Neymar Jr",
     number: 10,
     position: "FWD",
-    team: "Al Hilal",
+    team: "Santos FC",
     nationality: "Brazil",
+    image: "https://www.fifarosters.com/assets/players/fifa24/faces/190871.png",
     stats: { pace: 89, shooting: 85, passing: 86, dribbling: 94, defending: 37, physical: 63 },
   },
   {
@@ -594,6 +603,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Bayern Munich",
     nationality: "England",
+    image: "https://cdn3.futbin.com/content/fifa25/img/players/202126.png?fm=png&ixlib=java-2.1.0&verzion=2&w=512&s=1c7d50a8129776b8285fd2dc890d8aeb",
     stats: { pace: 70, shooting: 91, passing: 85, dribbling: 83, defending: 50, physical: 82 },
   },
   {
@@ -601,8 +611,9 @@ export const playerDatabase = [
     name: "Son Heung-min",
     number: 7,
     position: "FWD",
-    team: "Tottenham Hotspur",
+    team: "Los Angeles FC",
     nationality: "South Korea",
+    image: "https://cdn3.futbin.com/content/fifa25/img/players/200104.png?fm=png&ixlib=java-2.1.0&verzion=2&w=512&s=f2a00104083f105c7a563460d7e9cdf9",
     stats: { pace: 88, shooting: 87, passing: 82, dribbling: 87, defending: 42, physical: 70 },
   },
   {
@@ -612,6 +623,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Real Madrid",
     nationality: "Brazil",
+    image: "https://www.fifarosters.com/assets/players/fifa24/faces/238794.png",
     stats: { pace: 95, shooting: 83, passing: 75, dribbling: 92, defending: 29, physical: 73 },
   },
   {
@@ -621,6 +633,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Inter Milan",
     nationality: "Argentina",
+    image: "https://b.fssta.com/uploads/application/soccer/headshots/39831.vresize.350.350.medium.1.png",
     stats: { pace: 86, shooting: 87, passing: 75, dribbling: 84, defending: 40, physical: 80 },
   },
   {
@@ -630,6 +643,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Liverpool",
     nationality: "Uruguay",
+    image: "https://cdn3.futbin.com/content/fifa25/img/players/253072.png?fm=png&ixlib=java-2.1.0&verzion=2&w=512&s=2cfd48fc5b820f60a82e1b957124227a",
     stats: { pace: 96, shooting: 82, passing: 66, dribbling: 81, defending: 34, physical: 88 },
   },
   {
@@ -639,6 +653,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Napoli",
     nationality: "Nigeria",
+    image: "https://cdn3.futbin.com/content/fifa23/img/players/232293.png?fm=png&ixlib=java-2.1.0&w=512&s=9248c6f2acdf564a7af88f7fbdea2a18",
     stats: { pace: 90, shooting: 86, passing: 68, dribbling: 81, defending: 38, physical: 85 },
   },
   {
@@ -648,6 +663,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "AC Milan",
     nationality: "Portugal",
+    image: "https://b.fssta.com/uploads/application/soccer/headshots/56178.png",
     stats: { pace: 95, shooting: 82, passing: 75, dribbling: 90, defending: 25, physical: 82 },
   },
   {
@@ -657,6 +673,7 @@ export const playerDatabase = [
     position: "MID",
     team: "Bayern Munich",
     nationality: "Germany",
+    image: "https://cdn3.futbin.com/content/fifa25/img/players/256790.png?fm=png&ixlib=java-2.1.0&verzion=1&w=512&s=5e0324059dcf8af8d153118dd29e72ce",
     stats: { pace: 82, shooting: 76, passing: 81, dribbling: 91, defending: 35, physical: 65 },
   },
   {
@@ -666,6 +683,7 @@ export const playerDatabase = [
     position: "MID",
     team: "Manchester City",
     nationality: "England",
+    image: "https://cdn3.futbin.com/content/fifa25/img/players/237692.png?fm=png&ixlib=java-2.1.0&verzion=2&w=512&s=9833d255aaf6b8b1a6a72d904b71041f",
     stats: { pace: 84, shooting: 80, passing: 88, dribbling: 90, defending: 52, physical: 61 },
   },
   {
@@ -765,6 +783,7 @@ export const playerDatabase = [
     position: "FWD",
     team: "Manchester City",
     nationality: "England",
+    image: "https://cdn3.futbin.com/content/fifa25/img/players/206517.png?fm=png&ixlib=java-2.1.0&verzion=2&w=512&s=977aa8936d3f9642b2ce56b51c4cf22b",
     stats: { pace: 82, shooting: 72, passing: 84, dribbling: 90, defending: 43, physical: 65 },
   },
   {
