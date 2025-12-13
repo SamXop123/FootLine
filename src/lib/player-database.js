@@ -1149,15 +1149,6 @@ export const playerDatabase = [
     stats: { pace: 82, shooting: 84, passing: 88, dribbling: 87, defending: 25, physical: 65 },
   },
   {
-    id: "p123",
-    name: "Heung-min Son",
-    number: 7,
-    position: "FWD",
-    team: "Tottenham Hotspur",
-    nationality: "South Korea",
-    stats: { pace: 88, shooting: 87, passing: 82, dribbling: 87, defending: 42, physical: 70 },
-  },
-  {
     id: "p124",
     name: "Min-jae Kim",
     number: 3,
