@@ -66,6 +66,40 @@ const CommunityLineupCard = ({ post }) => {
     </Card>
   )
 }
+
+export default function Community() {
+  const [communityLineups, setCommunityLineups] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    // Load community lineups from localStorage
+    const loadCommunityLineups = () => {
+      try {
+        const stored = localStorage.getItem('communityLineups')
+        const lineups = stored ? JSON.parse(stored) : []
+        setCommunityLineups(lineups.sort((a, b) => b.timestamp - a.timestamp))
+      } catch (error) {
+        console.error('Error loading community lineups:', error)
+        setCommunityLineups([])
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadCommunityLineups()
+  }, [])
+
+  if (loading) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading community lineups...</p>
+        </div>
+      </div>
+    )
+  }
+
   return (
   )
 }
