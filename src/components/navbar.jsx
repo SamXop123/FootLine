@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Home, Trophy, ExternalLink } from 'lucide-react'
+import { Menu, X, Home, Trophy, ExternalLink, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 const navItems = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Premier League Builder', href: '/premier-league', icon: Trophy },
+  { name: 'Community', href: '/community', icon: Users },
   { name: 'Helpful Football Sites', href: '/resources', icon: ExternalLink },
 ]
 
