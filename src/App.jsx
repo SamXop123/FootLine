@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from '@/components/navbar'
 import Home from '@/pages/Home'
 import PremierLeague from '@/pages/PremierLeague'
+import Community from '@/pages/Community'
 import Resources from '@/pages/Resources'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -14,6 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/premier-league" element={<PremierLeague />} />
+        <Route path="/community" element={<Community />} />
         <Route path="/resources" element={<Resources />} />
       </Routes>
       <ToastContainer 
