@@ -114,5 +114,42 @@ export default function Community() {
         </p>
       </div>
 
+      {communityLineups.length === 0 ? (
+        <div className="text-center py-16">
+          <Users className="w-24 h-24 text-gray-300 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-gray-700 mb-2">
+            No community lineups yet
+          </h3>
+          <p className="text-gray-500 mb-6">
+            Be the first to share your lineup with the community!
+          </p>
+          <Button className="bg-green-600 hover:bg-green-700">
+            Create Your First Lineup
+          </Button>
+        </div>
+      ) : (
+        <div className="space-y-6">
+          <div className="flex justify-between items-center">
+            <h2 className="text-2xl font-semibold text-gray-800">
+              Recent Lineups ({communityLineups.length})
+            </h2>
+            <div className="flex gap-2">
+              <Button variant="outline">
+                Most Popular
+              </Button>
+              <Button variant="outline">
+                Recent
+              </Button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {communityLineups.map((post, index) => (
+              <CommunityLineupCard key={index} post={post} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
