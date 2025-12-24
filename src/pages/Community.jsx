@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import { Badge } from '@/components/ui/badge'
+import { Users, Calendar, Trophy } from 'lucide-react'
 
 const CommunityLineupCard = ({ post }) => {
   const formatDate = (timestamp) => {
@@ -101,5 +104,15 @@ export default function Community() {
   }
 
   return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold text-gray-900 mb-2">
+          Community Lineups
+        </h1>
+        <p className="text-lg text-gray-600">
+          Discover and share amazing football lineups from fans around the world
+        </p>
+      </div>
+
   )
 }
