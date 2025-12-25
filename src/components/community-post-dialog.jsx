@@ -90,6 +90,20 @@ export default function CommunityPostDialog({ isOpen, onClose, lineup, formation
         </DialogHeader>
         
         <DialogFooter>
+          <Button 
+            variant="outline" 
+            onClick={handleClose}
+            disabled={isPosting}
+          >
+            Cancel
+          </Button>
+          <Button 
+            onClick={handlePostToCommunity}
+            disabled={isPosting || !customName.trim() || !userName.trim()}
+            className="bg-green-600 hover:bg-green-700"
+          >
+            {isPosting ? 'Posting...' : 'Post to Community'}
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
