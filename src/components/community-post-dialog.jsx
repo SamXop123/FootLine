@@ -19,7 +19,16 @@ export default function CommunityPostDialog({ isOpen, onClose, lineup, formation
   const [description, setDescription] = useState('')
   const [isPosting, setIsPosting] = useState(false)
 
+  const handlePostToCommunity = async () => {
+    if (!customName.trim() || !userName.trim()) {
+      toast.error('Please fill in both lineup name and your name')
+      return
+    }
+
     setIsPosting(true)
+
+    try {
+      // Create the community post object
       const communityPost = {
         id: Date.now().toString(),
         customName: customName.trim(),
@@ -32,6 +41,10 @@ export default function CommunityPostDialog({ isOpen, onClose, lineup, formation
         views: 0
       }
 
+    } catch (error) {
+    } finally {
+    }
+  }
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
     </Dialog>
