@@ -41,6 +41,27 @@ export default function CommunityPostDialog({ isOpen, onClose, lineup, formation
         views: 0
       }
 
+      // Get existing community lineups from localStorage
+      const existingLineups = localStorage.getItem('communityLineups')
+      let communityLineups = existingLineups ? JSON.parse(existingLineups) : []
+
+      // Add new post to the beginning of the array
+      communityLineups.unshift(communityPost)
+
+      // Save back to localStorage
+      localStorage.setItem('communityLineups', JSON.stringify(communityLineups))
+
+      // Show success message
+      toast.success('Lineup posted to community successfully!')
+
+      // Reset form
+      setCustomName('')
+      setUserName('')
+      setDescription('')
+
+      // Close dialog
+      onClose()
+
     } catch (error) {
     } finally {
     }
