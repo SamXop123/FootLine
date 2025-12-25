@@ -89,6 +89,51 @@ export default function CommunityPostDialog({ isOpen, onClose, lineup, formation
           </DialogDescription>
         </DialogHeader>
         
+        <div className="grid gap-4 py-4">
+          <div className="grid gap-2">
+            <Label htmlFor="customName">Lineup Name *</Label>
+            <Input
+              id="customName"
+              placeholder="e.g., Ultimate Premier League Team"
+              value={customName}
+              onChange={(e) => setCustomName(e.target.value)}
+              maxLength={50}
+            />
+          </div>
+          
+          <div className="grid gap-2">
+            <Label htmlFor="userName">Your Name *</Label>
+            <Input
+              id="userName"
+              placeholder="e.g., John Doe"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              maxLength={30}
+            />
+          </div>
+          
+          <div className="grid gap-2">
+            <Label htmlFor="description">Description (Optional)</Label>
+            <Textarea
+              id="description"
+              placeholder="Tell us about your tactical approach..."
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              maxLength={200}
+              rows={3}
+            />
+          </div>
+
+          <div className="bg-gray-50 p-3 rounded-lg">
+            <p className="text-sm font-medium text-gray-700 mb-1">
+              Formation: <span className="text-green-600">{formation}</span>
+            </p>
+            <p className="text-sm text-gray-600">
+              {lineup.filter(player => player).length} players selected
+            </p>
+          </div>
+        </div>
+
         <DialogFooter>
           <Button 
             variant="outline" 
