@@ -81,12 +81,17 @@ export default function CommunityPostDialog({ isOpen, onClose, lineup, formation
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
+      <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Share Lineup with Community</DialogTitle>
           <DialogDescription>
             Share your amazing lineup with football fans around the world!
           </DialogDescription>
         </DialogHeader>
+        
+        <DialogFooter>
+        </DialogFooter>
+      </DialogContent>
     </Dialog>
   )
 }
