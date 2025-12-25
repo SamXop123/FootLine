@@ -63,11 +63,30 @@ export default function CommunityPostDialog({ isOpen, onClose, lineup, formation
       onClose()
 
     } catch (error) {
+      console.error('Error posting to community:', error)
+      toast.error('Failed to post lineup. Please try again.')
     } finally {
+      setIsPosting(false)
     }
   }
+
+  const handleClose = () => {
+    if (!isPosting) {
+      setCustomName('')
+      setUserName('')
+      setDescription('')
+      onClose()
+    }
+  }
+
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
+        <DialogHeader>
+          <DialogTitle>Share Lineup with Community</DialogTitle>
+          <DialogDescription>
+            Share your amazing lineup with football fans around the world!
+          </DialogDescription>
+        </DialogHeader>
     </Dialog>
   )
 }
